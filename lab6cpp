@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+//4
+double recursiveEquation(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return (1.0 / n) + recursiveEquation(n - 1);
+}
+
+// 5. 
+double recursiveEquation() {
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+    if (n == 0) {
+        return 0;
+    }
+    return (1.0 / n) + recursiveEquation(n - 1);
+}
+
+int main() {
+    // Question 4
+    int n;
+    cout << "Enter the value of n for the recursive equation: ";
+    cin >> n;
+    cout << "Result of the recursive equation: " << recursiveEquation(n) << endl;
+
+    // Question 5
+    cout << "Result of the overloaded recursive equation: " << recursiveEquation() << endl;
+
+    return 0;
+}
+
+
